@@ -1,3 +1,5 @@
+use std::num::NonZeroU8;
+
 use clap::Parser;
 
 fn wordlist() -> Vec<&'static str> {
@@ -10,8 +12,8 @@ fn wordlist() -> Vec<&'static str> {
 #[derive(Parser)]
 struct Args {
     /// Number of words
-    #[arg(default_value_t = 7)]
-    num_words: u8,
+    #[arg(default_value_t = NonZeroU8::new(7).unwrap())]
+    num_words: NonZeroU8,
 }
 
 fn main() {
@@ -34,7 +36,7 @@ fn main() {
         }
     };
 
-    let phrase: String = (0..args.num_words)
+    let phrase = (0..args.num_words.get())
         .map(|_| rand_word())
         .collect::<Vec<_>>()
         .join(" ");
