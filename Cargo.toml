@@ -1,0 +1,13 @@
+[package]
+name = "pwgen"
+version = "0.1.0"
+authors = ["Ryan Avella"]
+edition = "2021"
+
+[dependencies.clap]
+version = "4.0.29"
+features = ["derive"]
+
+[dependencies.rand]
+version="0.8.5"
+features=["getrandom"]
