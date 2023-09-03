@@ -1,3 +1,9 @@
+// This is taken from the 2016 EFF Large Wordlist for Passphrases
+//
+// See also:
+//  * https://www.eff.org/document/passphrase-wordlists
+//  * https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt
+//  * https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases
 pub static WORDS: [&str; 7776] = [
     "abacus",
     "abdomen",
